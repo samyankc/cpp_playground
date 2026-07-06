@@ -1,6 +1,6 @@
 {
     // avoid rebuild
-    "initializeCommand": "podman compose -f compose.bootstrap-image.yml run --rm build-bootstrap-image",
+    "initializeCommand": "podman-compose -f compose.bootstrap-image.yml run --rm build-bootstrap-image",
     "dockerComposeFile": "../compose.dev.yml",
     "service": "dev_container",
     "workspaceFolder": "/workspace",

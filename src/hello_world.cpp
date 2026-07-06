@@ -1,6 +1,7 @@
 #include <print>
 
-int main(){
+int main()
+{
     const auto World = "World";
-    std::println("Hello {}!",World);
+    std::println( "Hello {}!", World );
 }
