@@ -1,0 +1,1 @@
+export PS1='―――――――――――――――\n\u @ container : \w\n\\$ '

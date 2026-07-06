@@ -1,0 +1,4 @@
+ARG BOOTSTRAP_IMAGE
+FROM ${BOOTSTRAP_IMAGE}
+
+COPY ./script/.bashrc.d /root/.bashrc.d

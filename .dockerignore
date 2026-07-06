@@ -1,0 +1,12 @@
+/.cache
+/bin
+/build
+/build.debug
+
+logs
+*.log
+
+/.devcontainer
+/.vscode
+/.git
+/.env

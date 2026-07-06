@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb-dap",
+            "request": "launch",
+            "name": "Debug",
+            "cwd": "${fileWorkspaceFolder}",
+            "program": "bin/${fileBasenameNoExtension}",
+            "args": [
+                "--DEBUG"
+            ],
+            "preLaunchTask": "DebugBuildTarget",
+            "initCommands": [
+                "pro hand -p true -s false SIGTERM",
+                "pro hand -p true -s false SIGINT",
+                "pro hand -p true -s false SIGPIPE",
+                "pro hand -p true -s false SIGWINCH"
+            ],
+            "env": [
+                "ASAN_OPTIONS=detect_leaks=0" // LeakSanitizer does not work under ptrace (strace, gdb, etc)
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

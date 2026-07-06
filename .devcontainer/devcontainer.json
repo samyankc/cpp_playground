@@ -1,0 +1,23 @@
+{
+    // avoid rebuild
+    "initializeCommand": "podman compose -f compose.bootstrap-image.yml run --rm build-bootstrap-image",
+    "dockerComposeFile": "../compose.dev.yml",
+    "service": "dev_container",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "files.eol": "\n"
+            },
+            "extensions": [
+                "llvm-vs-code-extensions.vscode-clangd",
+                "llvm-vs-code-extensions.lldb-dap"
+            ]
+        }
+    },
+    "portsAttributes": {
+        "*": {
+            "onAutoForward": "ignore"
+        }
+    }
+}

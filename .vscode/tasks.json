@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "presentation": {
+        "echo": false,
+        "showReuseMessage": false,
+    },
+    "options": {
+        "cwd": "${fileWorkspaceFolder}"
+    },
+    "problemMatcher": [],
+    "type": "shell",
+    "tasks": [
+        {
+            "label": "Constraint_CMakeProject",
+            "command": "command ls | grep -qw CMakeLists.txt || { echo CMakeLists.txt not found at top level; exit 1; }",
+            "hide": true
+        },
+        {
+            "label": "Constraint_CPP",
+            "command": "[[ \"${fileExtname}\" == \".cpp\" ]] || { echo Please pick a cpp file; exit 1; }",
+            "hide": true
+        },
+        {
+            "label": "CMake Init",
+            "command": "cmake -B build; cmake -DCMAKE_BUILD_TYPE=Debug -B build.debug;",
+            "dependsOn": "Constraint_CMakeProject",
+            "presentation": {
+                "close": true
+            }
+        },
+        {
+            "label": "DebugBuildTarget",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build.debug",
+                "--target",
+                "${fileBasenameNoExtension}",
+            ],
+            "dependsOn": "CMake Init",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "close": true
+            }
+        }
+    ]
+}

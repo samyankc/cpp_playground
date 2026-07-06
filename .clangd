@@ -1,0 +1,20 @@
+InlayHints:
+    Enabled: No
+Diagnostics:
+    Suppress:
+        - builtin_definition
+        - misc-unused-alias-decls
+        - unused-includes
+        - c23-extensions
+    # ClangTidy:
+    #     Remove: '*'
+Hover:
+    ShowAKA: Yes
+Completion:
+    ArgumentLists: Delimiters
+    HeaderInsertion: Never
+# CompileFlags:
+#     Remove:
+#         - -freflection
+#     Add:
+#         - -D__glibcxx_reflection=202603
