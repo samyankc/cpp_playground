@@ -4,10 +4,7 @@ FROM ${BASE_IMAGE}
 
 RUN dnf config-manager setopt fastestmirror=True max_parallel_downloads=5 \
 &&  dnf -y update \
-&&  dnf -y install \
-            git gcc g++ cmake llvm clang-tools-extra lldb-dap \
-            libasan git-lfs \
-&&  dnf clean all \
-&&  git lfs install --system
+&&  dnf -y install git gcc g++ cmake llvm clang-tools-extra lldb-dap libasan \
+&&  dnf clean all
 
 CMD exit
