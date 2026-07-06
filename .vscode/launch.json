@@ -20,6 +20,7 @@
             "env": [
                 "ASAN_OPTIONS=detect_leaks=0" // LeakSanitizer does not work under ptrace (strace, gdb, etc)
             ],
+            "internalConsoleOptions": "neverOpen",
             "console": "integratedTerminal"
         }
     ]
