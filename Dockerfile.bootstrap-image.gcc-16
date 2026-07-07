@@ -1,0 +1,15 @@
+ARG PUBLIC_REGISTRY=docker.io/library
+ARG BASE_IMAGE=${PUBLIC_REGISTRY}/gcc:16
+FROM ${BASE_IMAGE}
+
+RUN apt -y update \
+&&  apt -y upgrade \
+&&  apt -y install cmake libasan8 lsb-release \
+&&  bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)" \
+&&  update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-22 100 \
+&&  update-alternatives --install /usr/bin/lldb lldb /usr/bin/lldb-22 100 \
+&&  update-alternatives --install /usr/bin/lldb-dap lldb-dap /usr/bin/lldb-dap-22 100 \
+&&  apt -y clean \
+&&  rm -rf /var/lib/apt/lists/*
+
+CMD exit
