@@ -12,10 +12,10 @@
             ],
             "preLaunchTask": "DebugBuildTarget",
             "initCommands": [
-                "pro hand -p true -s false SIGTERM",
-                "pro hand -p true -s false SIGINT",
-                "pro hand -p true -s false SIGPIPE",
-                "pro hand -p true -s false SIGWINCH"
+                "process hand -p true -s false SIGTERM",
+                "process hand -p true -s false SIGINT",
+                "process hand -p true -s false SIGPIPE",
+                "process hand -p true -s false SIGWINCH"
             ],
             "env": [
                 "ASAN_OPTIONS=detect_leaks=0" // LeakSanitizer does not work under ptrace (strace, gdb, etc)
