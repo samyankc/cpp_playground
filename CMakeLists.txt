@@ -4,7 +4,7 @@ project(playground
         LANGUAGES CXX)
 
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
-set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -gdwarf-4 -DDEBUG -fsanitize=address -fno-omit-frame-pointer")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -DDEBUG -g -g3 -gdwarf-4 -fvar-tracking-assignments -fno-omit-frame-pointer")
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release CACHE STRING "Default Build Type : Release" FORCE)
@@ -14,9 +14,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS true)
 
 add_library(common_config INTERFACE)
 target_compile_options(common_config INTERFACE -Wall -Wpedantic -Wextra)
-# target_compile_options(common_config INTERFACE -Wall -Wpedantic -Wextra -freflection)
 target_link_libraries(common_config INTERFACE)
-# target_link_libraries(common_config INTERFACE -lpqxx -lpq)
 
 file(GLOB SOURCE_FILES src/*.c src/*.cpp)
 

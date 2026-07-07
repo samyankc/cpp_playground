@@ -10,7 +10,7 @@ EOF
 RUN wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key > /etc/apt/trusted.gpg.d/apt.llvm.org.asc \
 &&  apt -y update \
 &&  apt -y upgrade \
-&&  apt -y --no-install-recommends install cmake libasan8 clangd-22 lldb-22 \
+&&  apt -y --no-install-recommends install cmake clangd-22 lldb-22 \
 &&  update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-22 100 \
 &&  update-alternatives --install /usr/bin/lldb lldb /usr/bin/lldb-22 100 \
 &&  update-alternatives --install /usr/bin/lldb-dap lldb-dap /usr/bin/lldb-dap-22 100 \
