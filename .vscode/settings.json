@@ -1,6 +1,6 @@
 {
-    "terminal.integrated.focusAfterRun": "terminal",
-    "debug.toolBarLocation": "docked",
+    // "terminal.integrated.focusAfterRun": "terminal",
+    "debug.toolBarLocation": "commandCenter",
     "containers.containerClient": "com.microsoft.visualstudio.containers.podman",
     "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.podmancompose",
     "extensions.ignoreRecommendations": true,
