@@ -1,8 +1,0 @@
-services:
-  build-bootstrap-image:
-    image: ${LOCAL_REGISTRY}/${COMPOSE_PROJECT_NAME}.bootstrap-image:${DEV_IMAGE_BASE_REF}-${DEV_IMAGE_BASE_TAG}
-    build:
-      context: .
-      dockerfile: Dockerfile.bootstrap-image.${DEV_IMAGE_BASE_REF}-${DEV_IMAGE_BASE_TAG}
-      args:
-        BASE_IMAGE: ${PUBLIC_REGISTRY}/${DEV_IMAGE_BASE_REF}:${DEV_IMAGE_BASE_TAG}

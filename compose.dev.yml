@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile.dev
       args:
-        BOOTSTRAP_IMAGE: ${LOCAL_REGISTRY}/${COMPOSE_PROJECT_NAME}.bootstrap-image:${DEV_IMAGE_BASE_REF}-${DEV_IMAGE_BASE_TAG}
+        BASE_IMAGE: ${PUBLIC_REGISTRY}/${DEV_IMAGE_BASE_REF}:${DEV_IMAGE_BASE_TAG}
     stop_grace_period: 2s
     working_dir: /workspace
     command: sh -c "rm -rf build build.debug && mkdir -p build && cmake -S . -B build; sleep infinity"
