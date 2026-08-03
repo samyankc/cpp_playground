@@ -22,7 +22,7 @@
         },
         {
             "label": "CMake Init",
-            "command": "cmake -B build; cmake -DCMAKE_BUILD_TYPE=Debug -B build.debug;",
+            "command": "cmake -B build; cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -B build.debug;",
             "dependsOn": "Constraint_CMakeProject",
             "presentation": {
                 "close": true

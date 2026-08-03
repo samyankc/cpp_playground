@@ -4,7 +4,7 @@ project(playground
         LANGUAGES CXX)
 
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -DDEBUG -g -g3 -gdwarf-4 -fvar-tracking-assignments -fno-omit-frame-pointer")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -DDEBUG -g -g3 -gdwarf-4 -fno-omit-frame-pointer")
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release CACHE STRING "Default Build Type : Release" FORCE)
