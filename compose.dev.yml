@@ -5,7 +5,7 @@ services:
     image: ${LOCAL_REGISTRY}/${COMPOSE_PROJECT_NAME}.dev-image:${DEV_IMAGE_BASE_REF}-${DEV_IMAGE_BASE_TAG}
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.${DEV_IMAGE_BASE_REF}-${DEV_IMAGE_BASE_TAG}.dev
       args:
         BASE_IMAGE: ${PUBLIC_REGISTRY}/${DEV_IMAGE_BASE_REF}:${DEV_IMAGE_BASE_TAG}
     stop_grace_period: 2s
