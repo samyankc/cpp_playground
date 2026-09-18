@@ -13,8 +13,8 @@ Hover:
 Completion:
     ArgumentLists: Delimiters
     HeaderInsertion: Never
-# CompileFlags:
-#     Remove:
-#         - -freflection
+CompileFlags:
+    Remove:
+        - -freflection
 #     Add:
 #         - -D__glibcxx_reflection=202603

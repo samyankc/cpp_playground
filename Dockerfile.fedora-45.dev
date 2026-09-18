@@ -1,5 +1,5 @@
 ARG PUBLIC_REGISTRY=docker.io/library
-ARG BASE_IMAGE=${PUBLIC_REGISTRY}/fedora:44
+ARG BASE_IMAGE=${PUBLIC_REGISTRY}/fedora:45
 FROM ${BASE_IMAGE}
 
 RUN dnf config-manager setopt fastestmirror=True max_parallel_downloads=5 \
