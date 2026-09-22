@@ -1,0 +1,82 @@
+{
+    "key_int": 123,
+    "key_str": " - str - ",
+    "key_array_int": [
+        11,
+        222,
+        3333
+    ],
+    "key_array_str": [
+        "aaa",
+        "bbbb",
+        "ccccc",
+        "dddddd"
+    ],
+    "key_range_int": {
+        "from": 546,
+        "to": 6758
+    },
+    "key_range_str": {
+        "from": "2025-12-23",
+        "to": "2026-02-12"
+    },
+    "key_composition": {
+        "any_of": [
+            "abc",
+            "def",
+            "xyz"
+        ],
+        "all_of": [
+            "qwe",
+            "asd",
+            "zxc",
+            "rty",
+            "fgh"
+        ],
+        "none_of": [
+            "qaz",
+            "wsx",
+            "edc",
+            "rfv"
+        ]
+    },
+    "key_full_criteria": {
+        "from": "2025-12-23",
+        "to": "2026-02-12",
+        "any_of": [
+            "abc",
+            "def",
+            "xyz"
+        ],
+        "all_of": [
+            "qwe",
+            "asd",
+            "zxc",
+            "rty",
+            "fgh"
+        ],
+        "none_of": [
+            "qaz",
+            "wsx",
+            "edc",
+            "rfv"
+        ]
+    },
+    "key_array_int_from_value": 987,
+    "key_array_str_from_value": "hjkl",
+    "key_range_int_from_value": 908,
+    "key_range_str_from_value": "2025-01-23 12:34:56",
+    "key_composition_from_value": "456456",
+    "key_composition_from_array": [
+        "34",
+        "567",
+        "8910"
+    ],
+    "key_full_criteria_from_value": "xyzz",
+    "key_full_criteria_from_array": [
+        "hhh",
+        "jjjjj",
+        "kkkkkkk",
+        "lllllllll"
+    ]
+}
